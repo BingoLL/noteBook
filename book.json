@@ -1,0 +1,17 @@
+{
+    "root": "./noteBook",
+    "title": "web note book",
+    "author": "张永兵",
+    "description" : "记录Gitbook的配置和一些插件的使用",
+    "language" : "zh-hans",
+    "links" : {
+        "sidebar" : {
+            }
+    },
+    "plugins": [
+        "toggle-chapters",
+        "image-captions"
+    ]
+}
+
+
