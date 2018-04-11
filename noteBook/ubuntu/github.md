@@ -17,9 +17,20 @@ IdentityFile ~/.ssh/aysee
 ```
 3、添加 aysee.pub 到你的git服务器网站上。
 
+-------
+
+### 严格按照上述三个步骤操作，一般不会出现问题
+### 以下内容未经测试
+
+
+
+
+
+
+
 4、测试配置文件是否正常工作
 
-`ssh -T git@gitcafe.com`
+`ssh -T git@github.com`
 
  如果，正常的话，会出现如下提示：
 
