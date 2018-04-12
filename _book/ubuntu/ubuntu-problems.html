@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>odoo · web note book</title>
+        <title>常见问题汇总 · web note book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="odoo-dev.html" />
+    <link rel="next" href="../odoo/" />
     
     
-    <link rel="prev" href="../ubuntu/ubuntu-problems.html" />
+    <link rel="prev" href="github.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../ubuntu/">
+        <li class="chapter " data-level="2.1" data-path="./">
             
-                <a href="../ubuntu/">
+                <a href="./">
             
                     
                     Ubuntu
@@ -146,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="../ubuntu/ubuntu-install.html">
+        <li class="chapter " data-level="2.1.1" data-path="ubuntu-install.html">
             
-                <a href="../ubuntu/ubuntu-install.html">
+                <a href="ubuntu-install.html">
             
                     
                     ubuntu 安装
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="../ubuntu/ubuntu-dev.html">
+        <li class="chapter " data-level="2.1.2" data-path="ubuntu-dev.html">
             
-                <a href="../ubuntu/ubuntu-dev.html">
+                <a href="ubuntu-dev.html">
             
                     
                     开发环境配置
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3" data-path="../ubuntu/usual-apps.html">
+        <li class="chapter " data-level="2.1.3" data-path="usual-apps.html">
             
-                <a href="../ubuntu/usual-apps.html">
+                <a href="usual-apps.html">
             
                     
                     常用软件安装
@@ -186,9 +186,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.3.1" data-path="../ubuntu/github.html">
+        <li class="chapter " data-level="2.1.3.1" data-path="github.html">
             
-                <a href="../ubuntu/github.html">
+                <a href="github.html">
             
                     
                     github
@@ -204,9 +204,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.4" data-path="../ubuntu/ubuntu-problems.html">
+        <li class="chapter active" data-level="2.1.4" data-path="ubuntu-problems.html">
             
-                <a href="../ubuntu/ubuntu-problems.html">
+                <a href="ubuntu-problems.html">
             
                     
                     常见问题汇总
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" data-path="../odoo/">
             
-                <a href="./">
+                <a href="../odoo/">
             
                     
                     odoo
@@ -236,9 +236,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="odoo-dev.html">
+        <li class="chapter " data-level="2.2.1" data-path="../odoo/odoo-dev.html">
             
-                <a href="odoo-dev.html">
+                <a href="../odoo/odoo-dev.html">
             
                     
                     安装配置环境
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="modules-dev.html">
+        <li class="chapter " data-level="2.2.2" data-path="../odoo/modules-dev.html">
             
-                <a href="modules-dev.html">
+                <a href="../odoo/modules-dev.html">
             
                     
                     模块开发
@@ -297,7 +297,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >odoo</a>
+        <a href=".." >常见问题汇总</a>
     </h1>
 </div>
 
@@ -312,9 +312,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="odoo-&#x7AE0;&#x8282;">odoo &#x7AE0;&#x8282;</h1>
-<h3 id="&#x672C;&#x7AE0;&#x8BB0;&#x5F55;&#x6709;&#x5173;odoo&#x5F00;&#x53D1;&#x76F8;&#x5173;&#x77E5;&#x8BC6;">&#x672C;&#x7AE0;&#x8BB0;&#x5F55;&#x6709;&#x5173;odoo&#x5F00;&#x53D1;&#x76F8;&#x5173;&#x77E5;&#x8BC6;</h3>
-
+                                <h1 id="&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;">&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h1>
+<ol>
+<li>&#x56FE;&#x5F62;&#x51E0;&#x9762;&#x5361;&#x6B7B;&#xFF1A;
+Ctrl + Alt + F1 &#x8F6C;&#x5230;tty1<pre><code>ps  all # &#x67E5;&#x770B;&#x8FDB;&#x7A0B;,&#x627E;&#x5230;Xorg&#x8FDB;&#x7A0B;&#x5230;PID&#x53F7; xxx
+sudo  kill xxx
+</code></pre></li>
+</ol>
+<pre><code>ps -t -tty7 &#x67E5;&#x770B;&#x8FDB;&#x7A0B;,&#x627E;&#x5230;Xorg&#x8FDB;&#x7A0B;&#x5230;PID&#x53F7; xxx
+kill xxx
+</code></pre>
                                 
                                 </section>
                             
@@ -341,12 +348,12 @@
 
             
                 
-                <a href="../ubuntu/ubuntu-problems.html" class="navigation navigation-prev " aria-label="Previous page: 常见问题汇总">
+                <a href="github.html" class="navigation navigation-prev " aria-label="Previous page: github">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="odoo-dev.html" class="navigation navigation-next " aria-label="Next page: 安装配置环境">
+                <a href="../odoo/" class="navigation navigation-next " aria-label="Next page: odoo">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -357,7 +364,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"odoo","level":"2.2","depth":1,"next":{"title":"安装配置环境","level":"2.2.1","depth":2,"path":"odoo/odoo-dev.md","ref":"odoo/odoo-dev.md","articles":[]},"previous":{"title":"常见问题汇总","level":"2.1.4","depth":2,"path":"ubuntu/ubuntu-problems.md","ref":"ubuntu/ubuntu-problems.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","image-captions","livereload"],"root":"./noteBook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","author":"张永兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"markdown/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: 百度LOGO","alt":"百度LOGO","nro":1,"url":"https://www.baidu.com/img/bd_logo1.png","index":1,"caption_template":"Figure: _CAPTION_","label":"百度LOGO","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"odoo/odoo-dev.html#fig2.2.1.1","level":"2.2.1","list_caption":"Figure: 首次登陆","alt":"首次登陆","nro":2,"url":"./img/odoo_001.png","index":1,"caption_template":"Figure: _CAPTION_","label":"首次登陆","attributes":{},"skip":false,"key":"2.2.1.1"}]},"title":"web note book","language":"zh-hans","links":{"sidebar":{}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"odoo/README.md","mtime":"2018-04-11T06:45:20.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-12T00:12:28.217Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常见问题汇总","level":"2.1.4","depth":2,"next":{"title":"odoo","level":"2.2","depth":1,"path":"odoo/README.md","ref":"odoo/README.md","articles":[{"title":"安装配置环境","level":"2.2.1","depth":2,"path":"odoo/odoo-dev.md","ref":"odoo/odoo-dev.md","articles":[]},{"title":"模块开发","level":"2.2.2","depth":2,"path":"odoo/modules-dev.md","ref":"odoo/modules-dev.md","articles":[]}]},"previous":{"title":"github","level":"2.1.3.1","depth":3,"path":"ubuntu/github.md","ref":"ubuntu/github.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","image-captions","livereload"],"root":"./noteBook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","author":"张永兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"markdown/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: 百度LOGO","alt":"百度LOGO","nro":1,"url":"https://www.baidu.com/img/bd_logo1.png","index":1,"caption_template":"Figure: _CAPTION_","label":"百度LOGO","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"odoo/odoo-dev.html#fig2.2.1.1","level":"2.2.1","list_caption":"Figure: 首次登陆","alt":"首次登陆","nro":2,"url":"./img/odoo_001.png","index":1,"caption_template":"Figure: _CAPTION_","label":"首次登陆","attributes":{},"skip":false,"key":"2.2.1.1"}]},"title":"web note book","language":"zh-hans","links":{"sidebar":{}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"ubuntu/ubuntu-problems.md","mtime":"2018-04-11T15:40:31.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-12T00:12:28.217Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

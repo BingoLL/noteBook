@@ -17,10 +17,6 @@ IdentityFile ~/.ssh/aysee
 ```
 3、添加 aysee.pub 到你的git服务器网站上。
 
--------
-
-### 严格按照上述三个步骤操作，一般不会出现问题
-### 以下内容未经测试
 
 
 
@@ -122,6 +118,11 @@ git remote add test git@github-aysee:ay-seeing/test.git
 　　ay-seeing 是github的用户名
 ```
 
+
+-------
+
+### 严格按照上述三个步骤操作，一般不会出现问题
+### 以下内容未经测试
  
 
 4、测试 ssh
