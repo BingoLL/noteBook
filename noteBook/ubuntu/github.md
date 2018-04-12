@@ -78,7 +78,6 @@ $ ssh-add ~/.ssh/aysee
 
 　　和
 
-
 ```
 2048 8e:71:ad:88:78:80:b2:d9:e1:2d:1d:e4:be:6b:db:8e /Users/aysee/.ssh/id_rsa (RSA)
 2048 a7:f4:0d:f1:b1:76:0b:bf:ed:9f:53:8c:3f:4c:f4:d6 /Users/aysee/.ssh/aysee (RSA)
@@ -88,7 +87,6 @@ $ ssh-add ~/.ssh/aysee
 
 `Could not open a connection to your authentication agent.`
 
-　　
 
 3、配置 ~/.ssh/config 文件
 
@@ -118,12 +116,6 @@ git remote add test git@github-aysee:ay-seeing/test.git
 　　ay-seeing 是github的用户名
 ```
 
-
--------
-
-### 严格按照上述三个步骤操作，一般不会出现问题
-### 以下内容未经测试
- 
 
 4、测试 ssh
 
