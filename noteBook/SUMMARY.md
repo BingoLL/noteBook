@@ -13,4 +13,6 @@
     * [常见问题汇总](ubuntu/ubuntu-problems.md)
 * [odoo](odoo/README.md)
     * [安装配置环境](odoo/odoo-dev.md)
-    * [模块开发](odoo/modules-dev.md)
+    * [模块开发](odoo/modules.md)
+        * [模型model](odoo/modules-model.md)
+        * [视图views](odoo/modules-views.md)
