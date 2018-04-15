@@ -5,8 +5,6 @@
 * [准备工作](pre-work/README.md)
     * [markdown基本语法知识](pre-work/markdown.md)
     * [gitbook](pre-work/gitbook.md)
-
-
 * [Ubuntu](ubuntu/README.md)
     * [ubuntu 安装](ubuntu/ubuntu-install.md)
     * [开发环境配置](ubuntu/ubuntu-dev.md)
