@@ -1,1 +1,1 @@
-## Please click [NoteBook-WebDev](https://bingo.gitbook.io/notebook-webdev) to view this book.
+## Click [NoteBook-WebDev](https://bingo.gitbook.io/notebook-webdev) , you can view the book.
