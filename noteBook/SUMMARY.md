@@ -2,7 +2,9 @@
 
 * [前言](README.md)
 
-* [Markdown](markdown/README.md)
+* [准备工作](pre-work/README.md)
+    * [markdown基本语法知识](pre-work/markdown.md)
+    * [gitbook](pre-work/gitbook.md)
 
 
 * [Ubuntu](ubuntu/README.md)
