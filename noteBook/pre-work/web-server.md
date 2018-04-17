@@ -10,6 +10,9 @@ sudo ufw enable
 sudo ufw default deny
 ```
 
+防火墙重启:
+`sudo ufw reload`
+
 关闭: `sudo ufw disable`
 查看防火墙状态: `sudo ufw status`
 
