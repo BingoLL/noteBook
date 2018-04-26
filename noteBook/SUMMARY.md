@@ -8,6 +8,7 @@
 * [Ubuntu](ubuntu/README.md)
     * [ubuntu 安装](ubuntu/ubuntu-install.md)
     * [开发环境配置](ubuntu/ubuntu-dev.md)
+        * [数据库](ubuntu/databases/mysql.md)
     * [常用软件安装](ubuntu/usual-apps.md)
         * [github](ubuntu/github.md)
     * [常见问题汇总](ubuntu/ubuntu-problems.md)
