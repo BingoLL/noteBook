@@ -124,3 +124,27 @@ git remote add test git@github-aysee:ay-seeing/test.git
 　　你会得到如下提示，表示这个ssh公钥已经获得了权限
 
 `Hi USERNAME! You've successfully authenticated, but github does not provide shell access.`
+
+5、 如果三恢复备份的密钥，添加git remote时候可能会报错：
+
+```
+Permissions 0775 for '/home/bingo/.ssh/dtdjview' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+```
+
+解决办法，进入文件夹 .ssh/：
+`chmod 400 dtdjview`
+或者执行：`chmod 400 ～/.ssh/dtdjview`
+
+6、 pull 代码时候如果报错
+
+```
+Bad owner or permissions on /home/bingo/.ssh/config
+fatal: 无法读取远程仓库。
+
+请确认您有正确的访问权限并且仓库存在。
+```
+解决办法：
+`chmod 600 ～/.ssh/config`
+

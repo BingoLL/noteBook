@@ -134,3 +134,61 @@ mysqldump –uroot –p 数据库名 > ~/Desktop/备份文件.sql;
 mysql -uroot –p 数据库名 < ~/Desktop/备份文件.sql
 根据提示输入mysql密码
 ```
+
+
+### 如果安装时候未提示输入密码，后期登陆可能会出现问题。
+```
+bingo@bingo-JinMai:~$ mysql
+ERROR 1045 (28000): Access denied for user 'bingo'@'localhost' (using password: NO)
+bingo@bingo-JinMai:~$ mysql -uroot -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+bingo@bingo-JinMai:~$ mysql -uroot -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+```
+
+
+### 解决办法
+
+1. 打开/etc/mysql/mysql.conf.d/mysqld.cnf 文件,命令如下
+
+   ` $ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf`
+
+2. 找到[mysqld]段，并加入一行“skip-grant-tables”,如下图，
+
+3. 重启mysql服务,用空密码进入mysql管理命令行，切换到mysql库,操作命令如下，
+```
+    $ mysql
+
+        Welcome to the MySQL monitor.  Commands end with ; or \g. 
+
+    mysql> use mysql
+        Reading table information for completion of table and column names
+        You can turn off this feature to get a quicker startup with -A
+        Database changed
+
+    mysql> update mysql.user set authentication_string=password('newpass') where user='root' and Host ='localhost';
+        Query OK, 1 row affected, 1 warning (0.00 sec)
+        Rows matched: 1  Changed: 1  Warnings: 1
+
+    mysql> update user set plugin="mysql_native_password"; 
+        Query OK, 0 rows affected (0.00 sec)
+        Rows matched: 3  Changed: 0  Warnings: 0
+
+    mysql> flush privileges;
+        Query OK, 0 rows affected (0.01 sec)
+
+    mysql> quit;
+        Bye
+```
+
+4. 回到sudo vi  /etc/mysql/mysql.conf.d/mysqld.cnf，把刚才加入的那一行“skip-grant-tables”注释或删除掉。
+
+5. 再次重启mysql服务sudo service mysql restart，使用新的密码登陆，修改成功。
+```
+    $ mysql -u root -p new_pass  
+        Welcome to the MySQL monitor.  Commands end with ; or \g.  
+    mysql> 
+```
+6. 至此，问题解决
