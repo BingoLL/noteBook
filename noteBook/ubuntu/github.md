@@ -116,6 +116,12 @@ git remote add test git@github-aysee:ay-seeing/test.git
 　　ay-seeing 是github的用户名
 ```
 
+### 记住添加remote后一定要执行以下代码：
+```
+git config --global user.email "you@example.com"
+git config --global user.name "yourname"
+```
+
 
 4、测试 ssh
 
