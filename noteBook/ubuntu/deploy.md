@@ -82,9 +82,91 @@ git init
 git remote add 。。。
 git pull 。。。
 ```
+
+## nginx uwsgi 部署
+
+root权限下apt安装nginx，pip3安装uwsgi，
+
 ### /home/.ms_config/ 文件夹下用来配置uwsgi配置文件
 
+创建nginx的配置文件
+```
+# mysite_nginx.conf
 
+# the upstream component nginx needs to connect to
+upstream django {
+    # server unix:///path/to/your/mysite/mysite.sock; # for a file socket
+    server 127.0.0.1:8001; # for a web port socket (we'll use this first)
+}
+
+# configuration of the server
+server {
+    # the port your site will be served on
+    listen      8000;
+    # the domain name it will serve for
+    server_name example.com; # substitute your machine's IP address or FQDN
+    charset     utf-8;
+
+    # max upload size
+    client_max_body_size 75M;   # adjust to taste
+
+    # Django media
+    location /media  {
+        alias /path/to/your/mysite/media;  # your Django project's media files - amend as required
+    }
+
+    location /static {
+        alias /path/to/your/mysite/static; # your Django project's static files - amend as required
+    }
+
+    # Finally, send all non-media requests to the Django server.
+    location / {
+        uwsgi_pass  django;
+        include     /path/to/your/mysite/uwsgi_params; # the uwsgi_params file you installed
+    }
+}
+```
+
+然后软连接
+
+`sudo ln -s ~/path/to/your/mysite/mysite_nginx.conf /etc/nginx/sites-enabled/`
+
+重启nginx
+`/etc/init.d/nginx restart`
+
+对应的uwsgi_params
+```
+uwsgi_param  QUERY_STRING       $query_string;
+uwsgi_param  REQUEST_METHOD     $request_method;
+uwsgi_param  CONTENT_TYPE       $content_type;
+uwsgi_param  CONTENT_LENGTH     $content_length;
+
+uwsgi_param  REQUEST_URI        $request_uri;
+uwsgi_param  PATH_INFO          $document_uri;
+uwsgi_param  DOCUMENT_ROOT      $document_root;
+uwsgi_param  SERVER_PROTOCOL    $server_protocol;
+uwsgi_param  REQUEST_SCHEME     $scheme;
+uwsgi_param  HTTPS              $https if_not_empty;
+
+uwsgi_param  REMOTE_ADDR        $remote_addr;
+uwsgi_param  REMOTE_PORT        $remote_port;
+uwsgi_param  SERVER_PORT        $server_port;
+uwsgi_param  SERVER_NAME        $server_name;
+```
+
+uwsgi.ini
+```
+[uwsgi]
+socket= :8000
+chdir=/home/ddvd/ddvd_web_deploy/Web_source/
+module=ddvd.wsgi
+processes=4
+threads=2
+master=True
+pidfile=uwsgi.pid
+daemonize=uwsgi.log
+
+```
 
 
 
