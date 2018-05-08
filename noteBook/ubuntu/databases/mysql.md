@@ -192,3 +192,71 @@ ERROR 1698 (28000): Access denied for user 'root'@'localhost'
     mysql> 
 ```
 6. 至此，问题解决
+
+## 创建用户，并赋予权限
+```
+mysql -uroot -p
+
+create user 'test'@'localhost' identified by '123456';  
+create user 'test'@'%' identified by '123456'; 
+flush privileges; 
+grant all on *.* to test@'%' identified by "123456";
+```
+
+## mysql identified怎么用
+
+1. 用管理员登陆mysql；
+2. 创建数据库create database db01；
+3. 添加用户和用户权限：
+### Mysql添加用户
+使用可以对mysql数据库用户表有操作权限的用户名登陆mysql
+`insert into user(Host,User,Password) values('%','name','password');`
+如果work用户没有登陆权限，则
+```
+killall mysqld
+share/mysql/mysql.server start
+grant all on *.* to work@'%' identified by "password";
+```
+`
+MySQL赋予用户权限的命令的简单格式为
+```
+grant 权限 on 数据库对象 to 用户
+grant 权限 on 数据库对象 to 用户 identified by "密码"
+```
+
+用户名:ad,密码：ad_pass，登陆ip:192.168.0.10
+//用户在所有登陆ip的权限
+`grant all on *.* to ad@‘%’ identified by "ad_pass";`
+
+
+//开放管理MySQL中所有数据库的权限
+`grant all on *.* to ad@'192.168.0.10' identified by "ad_pass";`
+
+
+//开放管理MySQL中具体数据库(test)的权限
+`grant all privileges on test to ad@'192.168.0.10' identified by "ad_pass";`
+或
+`grant all on test to ad@'192.168.0.10' identified by "ad_pass";`
+
+
+//开放管理MySQL中具体数据库中的表(test.table1)的权限
+`grant all on test.table1 to ad@'192.168.0.10' identified by "ad_pass"`
+
+
+//开放管理MySQL中具体数据库的表(test.table1)的部分列的权限
+`grant select(id,se,rank) on test.table1 to ad@'192.168.0.10' identified by "ad_pass";`
+
+
+//开放管理操作指令
+`grant select,insert,update,delete on test.* to ad@'192.168.0.10' identified by "ad_pass";`
+
+
+//回收权限
+`revoke all on *.* from ad@localhost;`
+
+
+//查看MySQL用户权限
+```
+show grants;
+show grants for ad@localhost;
+```
