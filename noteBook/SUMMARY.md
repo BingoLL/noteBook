@@ -7,6 +7,7 @@
     * [gitbook](pre-work/gitbook.md)
     * [防火墙设置](pre-work/web-server.md)
 * [Ubuntu](ubuntu/README.md)
+    * [uwsgi nginx](ubuntu/deploy.md)
     * [ubuntu 安装](ubuntu/ubuntu-install.md)
     * [开发环境配置](ubuntu/ubuntu-dev.md)
         * [数据库](ubuntu/databases/README.md)
