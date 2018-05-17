@@ -27,3 +27,15 @@ export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 再次链接数据,应该就可以正常了.
 
 ```
+
+查看当前用户下所有的表:
+
+ORACLE下有三个视图
+
+DBA_TABLES  拥有DBA角色的用户可以查看系统中的所有表
+
+USER_TABLES 登录数据库的当前用户拥有的所有表
+
+ALL_TABLES 登录数据库的当前用户有权限查看的所有表
+
+select table_name from all_tables;
