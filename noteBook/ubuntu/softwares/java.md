@@ -1,5 +1,9 @@
 ## 如何在Ubuntu 16.04上正确安装Oracle Java
 
+### 查看已安装软件名
+
+`dpkg -l | grep jdk`
+
 ### 第一步: 将webupd8team存储库添加到apt
 
 我们将使用命令add-apt-repository通过以下命令添加webupd8team存储库：
