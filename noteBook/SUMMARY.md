@@ -13,6 +13,8 @@
         * [数据库](ubuntu/databases/README.md)
             * [MySQL](ubuntu/databases/mysql.md)
             * [oracle](ubuntu/databases/oracle-client.md)
+        * [软件](ubuntu/softwares/README.md)
+            * [JAVA](ubuntu/softwares/java.md)
     * [常用软件安装](ubuntu/usual-apps.md)
         * [github](ubuntu/github.md)
     * [常见问题汇总](ubuntu/ubuntu-problems.md)
