@@ -54,6 +54,7 @@ export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 　　安装所需要的库：
 
 　　sudo apt-get install libaio1
+
 3. 配置环境
 
 　　①打开/etc/ld.so.conf文件
