@@ -1,5 +1,8 @@
 # 问题解决办法
 
+
+shell 连接服务器中文乱码，执行命令：`sudo locale-gen zh_CN.UTF-8`
+
 1. 图形几面卡死：
 Ctrl + Alt + F1 转到tty1
 ```
