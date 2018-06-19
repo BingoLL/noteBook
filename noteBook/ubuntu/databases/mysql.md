@@ -1,3 +1,11 @@
+### 完全卸载MySQL
+```
+sudo apt purge mysql-*
+sudo rm -rf /etc/mysql/ /var/lib/mysql
+sudo apt autoremove
+sudo apt autoreclean
+```
+
 ### 安装
 安装
 `sudo apt install mysql-server mysql-client`
