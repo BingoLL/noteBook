@@ -15,6 +15,7 @@
         * [oracle](ubuntu/databases/oracle-client.md)
     * [软件](ubuntu/softwares/README.md)
         * [JAVA](ubuntu/softwares/java.md)
+        * [vue_js](ubuntu/softwares/vue_js.md)
         * [github](ubuntu/softwares/github.md)
         * [virtualenv](ubuntu/softwares/py3_virtualenv.md)
     * [常见问题汇总](ubuntu/problems/README.md)
