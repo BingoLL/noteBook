@@ -29,3 +29,12 @@ sudo cd my-project
 sudo  npm install
 sudo npm run dev
 ```
+
+
+### 解决npm update的权限问题
+
+```
+sudo chown -R bingo ~/.npm
+sudo chown -R bingo ~/node_modules
+```
+
