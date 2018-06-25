@@ -86,11 +86,13 @@ import 'jquery'
 npm run dev
 ```
 但是编译却报错了：
-
+```
 http://eslint.org/docs/rules/no-undef '$' is not defined or
 http://eslint.org/docs/rules/no-undef 'jQuery' is not defined
+```
 咋回事呢？？？
-3.eslint 检查
+
+3. eslint 检查
 机智的朋友肯定想到跟eslint有关，没错，这时候需要做的下一步就是要修改根目录下.eslintrc.js文件了，在改文件的module.exports中，为env添加一个键值对 jquery: true 就可以了，也就是：
 ```
 env: {
