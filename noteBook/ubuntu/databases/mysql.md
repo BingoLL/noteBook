@@ -1,3 +1,10 @@
+### 安装MySQL-python
+
+```
+sudo apt install python-dev libmysqlclient-dev
+pip install MySQL-python==1.2.5
+```
+
 ### 完全卸载MySQL
 ```
 sudo apt purge mysql-*
