@@ -1,3 +1,32 @@
+
+## 分支branch
+
+1. 查看分支
+```
+git branch
+```
+
+2. 以master分支数据为基础同步到bingo分支
+```
+git push ntb master:bingo
+```
+
+3. 推送到bingo分支
+```
+git push ntb bingo
+```
+
+4. 创建分支
+```
+git branch bingo
+```
+
+5. 切换分支
+```
+git checkout bingo
+
+```
+
 # github
 ##### 如果你已经有了一套名为 id_rsa 的公秘钥，将要生成另外一个公钥，比如 aysee ，你也可以使用任何你喜欢的名字。
 ##### 步骤如下：
