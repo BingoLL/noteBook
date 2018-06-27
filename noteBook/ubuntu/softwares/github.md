@@ -27,6 +27,39 @@ git checkout bingo
 
 ```
 
+6. 版本退回
+```
+git log
+
+    commit c4a76e09cf5475fac3f168d66485de4a76e0d078 (HEAD -> bingo, pytb/bingo)
+    Author: Bingo.Zhang <1358223058@qq.com>
+    Date:   Wed Jun 27 09:20:26 2018 +0800
+
+    mv?
+
+    commit 37ec04681326fbf01783f0fdf33e37ae8652d406
+    Author: Bingo.Zhang <1358223058@qq.com>
+    Date:   Wed Jun 27 09:16:01 2018 +0800
+
+    bingo_test.md
+
+    commit 97809749c183b2ad60391ff766a73a388d3acf35
+    Author: Bingo.Zhang <1358223058@qq.com>
+    Date:   Wed Jun 27 09:07:52 2018 +0800
+
+    test bingo branch
+
+    commit cb29432215dbf1a5b876c4d1056c54970b30b6cf
+    Author: Xu Yuan <nicai@unknow.com>
+    Date:   Fri Jun 22 15:15:41 2018 +0800
+
+    更新编译便脚本中的版本生成规则
+
+git reset --hard HEAD^^^
+git reset --hard 978097
+```
+
+
 # github
 ##### 如果你已经有了一套名为 id_rsa 的公秘钥，将要生成另外一个公钥，比如 aysee ，你也可以使用任何你喜欢的名字。
 ##### 步骤如下：
