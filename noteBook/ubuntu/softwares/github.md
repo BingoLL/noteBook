@@ -24,7 +24,6 @@ git branch bingo
 5. 切换分支
 ```
 git checkout bingo
-
 ```
 
 6. 版本退回
