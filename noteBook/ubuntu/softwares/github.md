@@ -28,7 +28,7 @@ git checkout bingo
 
 6. 版本退回
 ```
-git log
+    git log
 
     commit c4a76e09cf5475fac3f168d66485de4a76e0d078 (HEAD -> bingo, pytb/bingo)
     Author: Bingo.Zhang <1358223058@qq.com>
@@ -54,8 +54,8 @@ git log
 
     更新编译便脚本中的版本生成规则
 
-git reset --hard HEAD
-git reset --hard 978097
+    git reset --hard HEAD
+    git reset --hard 978097
 ```
 
 
