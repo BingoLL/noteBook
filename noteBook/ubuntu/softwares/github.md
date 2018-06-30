@@ -57,7 +57,6 @@ git log
 git reset --hard HEAD
 git reset --hard 978097
 ```
-```
 
 
 # github
