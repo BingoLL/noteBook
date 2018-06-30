@@ -237,26 +237,28 @@ ettings里设置有问题
 ### css静态文件仍然无法加载的解决办法
 
 1. 项目应用下的static文件下的web.config文件中<handlers>下添加
+
 ```
 <clear/>
-      <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
+<add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
 ```
+完整如下：
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <system.webServer>
-        <!-- this configuration overrides the FastCGI handler to let IIS serve the static files -->
-        <handlers>
-            <clear/>
-            <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
-        </handlers>
-    </system.webServer>
-</configuration>
-
+    <configuration>
+        <system.webServer>
+            <!-- this configuration overrides the FastCGI handler to let IIS serve the static files -->
+            <handlers>
+                <clear/>
+                <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
+            </handlers>
+        </system.webServer>
+    </configuration>
 ```
 
 2. IIS管理器，选定网站项目，右击添加虚拟路径
+
 填写虚拟路径的别名和路径，别名一般为static，路径则是该网页app下的static文件夹，也就是刚才创建web.config的文件夹
 重启IIS，应该问题会解决
 
