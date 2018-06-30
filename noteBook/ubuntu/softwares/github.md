@@ -55,8 +55,9 @@ git log
 
     更新编译便脚本中的版本生成规则
 
-git reset --hard HEAD^^^
+git reset --hard HEAD
 git reset --hard 978097
+```
 ```
 
 
