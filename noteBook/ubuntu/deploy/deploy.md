@@ -168,7 +168,95 @@ daemonize=uwsgi.log
 
 ```
 
+## windows server 部署Django
+
+1. 安装IIS
+
+开始-管理工具-服务器管理器-添加角色-下一步，勾选Web服务器(IIS)-添加角色服务，多添加几个吧，不然网站运行会报错
+
+2. 配置安装
+
+默认已经安装好python pip
+```
+安装wfastcgi
+pip install wfastcgi 安装
+wfastcgi-enable 这个命令是启动 会输出一个目录路径
+```
+配置web.config
+在项目根目录 即manage.py同级目录 新建文本文件web.config
+模板如下
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <handlers>
+            <add name="Python FastCGI" 
+            path="*" 
+            verb="*" 
+            modules="FastCgiModule" 
+            scriptProcessor="<Path to Python>\python.exe|<Path to Python>\lib\site-packages\wfastcgi.py" 
+            resourceType="Unspecified" 
+            requireAccess="Script"/>
+        </handlers>
+    </system.webServer>
+    <appSettings>
+        <add key="WSGI_HANDLER" value="django.core.wsgi.get_wsgi_application()" />
+        <add key="PYTHONPATH" value="<Path to Django App>" />
+        <add key="DJANGO_SETTINGS_MODULE" value="<Django App>.settings" />
+    </appSettings>
+</configuration>
+
+```
+criptProcessor的值，要改为前文说过的运行wfastcgi输出的那个值。
+PYTHONPATH的value要改为manager.py的那个目录，也就是你项目的根目录例如：“C:\Users\Administrator\PycharmProjects\mydj"。DJANGO_SETTINGS_MODULE的value中的<Django App>要改为你的项目名 例如：”mydj“。
+
+此时在iis中新建一个网站 目录就设置为项目根目录
+应该就可以浏览了
+
+css，js等文件获取不到 就在static目录下放一个web.config 其中name与前面相同
+
+```
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <handlers>
+            <remove name="Python FastCGI" />
+        </handlers>
+    </system.webServer>
+</configuration>
+```
+ettings里设置有问题
+可以用manage.py collectstatic 把静态文件归拢 然后替换你的现在的static目录
+
+若出现500.19 权限不足的问题
+就在项目根目录右击-属性-安全-编辑-添加-输入Everyone-确定-（修改打钩） 重启网站就可以解决了
+至此 发布完毕
 
 
+### css静态文件仍然无法加载的解决办法
 
+1. 项目应用下的static文件下的web.config文件中<handlers>下添加
+```
+<clear/>
+      <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
+```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <!-- this configuration overrides the FastCGI handler to let IIS serve the static files -->
+        <handlers>
+            <clear/>
+            <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
+        </handlers>
+    </system.webServer>
+</configuration>
+
+```
+
+2. IIS管理器，选定网站项目，右击添加虚拟路径
+填写虚拟路径的别名和路径，别名一般为static，路径则是该网页app下的static文件夹，也就是刚才创建web.config的文件夹
+重启IIS，应该问题会解决
 
