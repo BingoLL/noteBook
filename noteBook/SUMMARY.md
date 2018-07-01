@@ -8,6 +8,7 @@
     * [防火墙设置](pre-work/web-server.md)
 * [Ubuntu](ubuntu/README.md)
     * [ubuntu 安装](ubuntu/ubuntu-install.md)
+    * [shell 脚本](ubuntu/shell-script.md)
     * [部署](ubuntu/deploy/README.md)
         * [uwsgi nginx](ubuntu/deploy/deploy.md)
     * [数据库](ubuntu/databases/README.md)
