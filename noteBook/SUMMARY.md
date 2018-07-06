@@ -9,6 +9,7 @@
 * [Ubuntu](ubuntu/README.md)
     * [ubuntu 安装](ubuntu/ubuntu-install.md)
     * [shell 脚本](ubuntu/shell-script.md)
+    * [常用命令](ubuntu/commands.md)
     * [部署](ubuntu/deploy/README.md)
         * [uwsgi nginx](ubuntu/deploy/deploy.md)
     * [数据库](ubuntu/databases/README.md)
