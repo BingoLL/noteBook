@@ -31,6 +31,7 @@ $ sudo apt-get install git
 
 3. Install Git on Linux from Source
 At this moment Linux Distribution repository having bit older version of Git, so i’m going to install from source archive.
+
 ```
 # Install Dependancy to RPM based system #
 $ sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
