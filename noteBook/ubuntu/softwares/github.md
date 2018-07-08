@@ -5,6 +5,7 @@
 
     ```
     adduser git
+    passwd git
     su - git
     mkdir .ssh
     chmod 700 .ssh
@@ -53,7 +54,12 @@
    ```
    su -s /bin/bash git
    ```
+8. 上传用户公钥的其他方法
 
+    ```
+    scp ~/.ssh/id_rsa.pub user@serverIP:/home/git/.ssh
+    cat /home/git/.ssh/id_rsa.pub >> /home/git/.ssh/authorized_keys
+    ```
 
 
 ### git 安装
