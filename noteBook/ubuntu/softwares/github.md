@@ -38,7 +38,17 @@
     $ chmod +x /home/git/git-shell-commands/help
     $ chmod +x /home/git/git-shell-commands/list
     ```
-6. 至此，git服务应该已经搭建完成了
+6. 解决客户端免密码登陆
+
+    ```
+    # vim /etc/ssh/ssh_config
+    Host *
+    RSAAuthentication yes
+    PubkeyAuthentication yes
+    GSSAPIAuthentication yes
+    ```
+
+7. 至此，git服务应该已经搭建完成了
    以后再创建项目，切换git用户使用 
    ```
    su -s /bin/bash git
