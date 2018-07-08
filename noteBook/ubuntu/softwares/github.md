@@ -39,6 +39,10 @@
     $ chmod +x /home/git/git-shell-commands/list
     ```
 6. 至此，git服务应该已经搭建完成了
+   以后再创建项目，切换git用户使用 
+   ```
+   su -s /bin/bash git
+   ```
 
 
 
