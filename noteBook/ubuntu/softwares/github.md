@@ -1,3 +1,47 @@
+### git 服务器搭建
+
+1. git安装，建议安装新版的，centos默认版本较低
+2. 创建一个git 用户，不需要为这个用户创建密码，用来运行git服务
+
+    ```
+    adduser git
+    su - git
+    mkdir .ssh
+    chmod 700 .ssh
+    touch ~/.ssh/authorized_keys 
+    chmod 644 ~/.ssh/authorized_keys
+     
+    vim ~/.ssh/authorized_keys
+
+    ```
+3. 初始化仓库项目
+    ```
+    su - git
+    cd /home/git/
+    mkdir gittest
+    git init --bare gittest
+    ```
+
+4. 使用git-shell登录
+
+    ```
+    [root@BingoT ~]# which git-shell
+    /usr/local/bin/git-shell
+    那么上面的/etc/passwd文件就应该修改为：
+    git:x:1002:1002:,,,:/home/git:/usr/local/bin/git-shell
+    ```
+5. 还要复制一个名为git-shell-commands的目录
+    
+    ```
+    $ cp /usr/share/doc/git-1.7.4.4/contrib/git-shell-commands /home/git -R
+    $ chown git:developers /home/git/git-shell-commands/ -R
+    $ chmod +x /home/git/git-shell-commands/help
+    $ chmod +x /home/git/git-shell-commands/list
+    ```
+6. 至此，git服务应该已经搭建完成了
+
+
+
 ### git 安装
 
 1. Install Git on Linux
