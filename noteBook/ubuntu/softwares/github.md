@@ -2,6 +2,7 @@
 
 1. Install Git on Linux
 By default Git included in all the Linux distro, it is easiest way to install Git on Linux using package manager.
+
 ```
 # Install Git to Debian based system #
 $ sudo apt-get install git
@@ -18,6 +19,7 @@ $ sudo zyper install git
 # Install Git to openSUSE system #
 $ sudo pacman -S git
 ```
+
 2. Install Git via PPA
 Alternatively we can install latest version of Git to Ubuntu/Mint systems via PPA.
 
@@ -26,6 +28,7 @@ $ sudo apt-add-repository ppa:git-core/ppa
 $ sudo apt-get update
 $ sudo apt-get install git
 ```
+
 3. Install Git on Linux from Source
 At this moment Linux Distribution repository having bit older version of Git, so i’m going to install from source archive.
 ```
@@ -45,14 +48,15 @@ $ sudo make install
 # Install upgrade automatically in future #
 $ sudo git clone git://git.kernel.org/pub/scm/git/git.git
 ```
-Checking Git Version
+
+4. Checking Git Version
+
 ```
 $ git --version
 git version 2.8.0
-Cool…)
 ```
 
-## 分支branch
+### 分支branch
 
 1. 查看分支
 ```
@@ -112,7 +116,7 @@ git checkout bingo
 ```
 
 
-# github
+### github
 ##### 如果你已经有了一套名为 id_rsa 的公秘钥，将要生成另外一个公钥，比如 aysee ，你也可以使用任何你喜欢的名字。
 ##### 步骤如下：
 1、生成一个新的自定义名称的公钥：
