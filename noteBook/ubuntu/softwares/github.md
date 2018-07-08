@@ -1,61 +1,61 @@
 ### git 安装
 
 1. Install Git on Linux
-By default Git included in all the Linux distro, it is easiest way to install Git on Linux using package manager.
+    By default Git included in all the Linux distro, it is easiest way to install Git on Linux using package manager.
 
-```
-# Install Git to Debian based system #
-$ sudo apt-get install git
+    ```
+    # Install Git to Debian based system #
+    $ sudo apt-get install git
 
-# Install Git to RHEL/CentOS & Up to Fedora 21 system #
-$ sudo yum install git
+    # Install Git to RHEL/CentOS & Up to Fedora 21 system #
+    $ sudo yum install git
 
-# Install Git to Fedora 22 & later system #
-$ sudo dnf install git
+    # Install Git to Fedora 22 & later system #
+    $ sudo dnf install git
 
-# Install Git to Arch Linux system #
-$ sudo zyper install git
+    # Install Git to Arch Linux system #
+    $ sudo zyper install git
 
-# Install Git to openSUSE system #
-$ sudo pacman -S git
-```
+    # Install Git to openSUSE system #
+    $ sudo pacman -S git
+    ```
 
 2. Install Git via PPA
-Alternatively we can install latest version of Git to Ubuntu/Mint systems via PPA.
+    Alternatively we can install latest version of Git to Ubuntu/Mint systems via PPA.
 
-```
-$ sudo apt-add-repository ppa:git-core/ppa
-$ sudo apt-get update
-$ sudo apt-get install git
-```
+    ```
+    $ sudo apt-add-repository ppa:git-core/ppa
+    $ sudo apt-get update
+    $ sudo apt-get install git
+    ```
 
 3. Install Git on Linux from Source
-At this moment Linux Distribution repository having bit older version of Git, so i’m going to install from source archive.
+    At this moment Linux Distribution repository having bit older version of Git, so i’m going to install from source archive.
 
-```
-# Install Dependancy to RPM based system #
-$ sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+    ```
+    # Install Dependancy to RPM based system #
+    $ sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
 
-# Install Dependancy to Debian based system #
-$ sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
+    # Install Dependancy to Debian based system #
+    $ sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 
-$ sudo wget https://www.kernel.org/pub/software/scm/git/git-2.8.0.tar.gz
-$ sudo tar -xzf git-2.8.0.tar.gz
-$ cd git-2.8.0
-$ sudo make configure
-$ sudo ./configure --prefix=/usr/local
-$ sudo make install
+    $ sudo wget https://www.kernel.org/pub/software/scm/git/git-2.8.0.tar.gz
+    $ sudo tar -xzf git-2.8.0.tar.gz
+    $ cd git-2.8.0
+    $ sudo make configure
+    $ sudo ./configure --prefix=/usr/local
+    $ sudo make install
 
-# Install upgrade automatically in future #
-$ sudo git clone git://git.kernel.org/pub/scm/git/git.git
-```
+    # Install upgrade automatically in future #
+    $ sudo git clone git://git.kernel.org/pub/scm/git/git.git
+    ```
 
 4. Checking Git Version
 
-```
-$ git --version
-git version 2.8.0
-```
+    ```
+    $ git --version
+    git version 2.8.0
+    ```
 
 ### 分支branch
 
