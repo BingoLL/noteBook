@@ -31,3 +31,27 @@ yum install python36u-pip -y
 ```
 ln -s /bin/pip3.6 /bin/pip3
 ```
+
+### 安装配置虚拟环境 virtualenvwrapper
+
+```
+sudo `which pip2.7` install virtualenvwrapper
+sudo find / -name virtualenvwrapper.sh
+```
+配置
+
+```
+sudo vim /etc/profile 
+
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
+```
+记得执行如下命令
+
+```
+source /etc/profile
+```
+
+`mkvirtualenv env1` 即可创建python3独立环境
+
