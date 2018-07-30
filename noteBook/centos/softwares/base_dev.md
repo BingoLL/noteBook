@@ -55,3 +55,4 @@ source /etc/profile
 
 `mkvirtualenv env1` 即可创建python3独立环境
 
+http://virtualenvwrapper.readthedocs.io/en/latest/
