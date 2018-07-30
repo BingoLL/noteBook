@@ -23,6 +23,9 @@
     * [常见问题汇总](ubuntu/problems/README.md)
         * [问题1](ubuntu/problems/ubuntu-problems.md)
 
+* [Centos](centos/README.md)
+    * [软件](centos/softwares/README.md)
+        * [Base_Dev](centos/softwares/base_dev.md)
 * [odoo](odoo/README.md)
     * [安装配置环境](odoo/odoo-dev.md)
     * [模块开发](odoo/modules.md)
