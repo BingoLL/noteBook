@@ -275,3 +275,8 @@ grant 权限 on 数据库对象 to 用户 identified by "密码"
 show grants;
 show grants for ad@localhost;
 ```
+
+//MySQL5.7 修改用户密码
+```
+update mysql.user set authentication_string=PASSWORD('newpassword') where user='username';
+```
